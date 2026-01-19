@@ -1,7 +1,7 @@
 import React from 'react';
 import './Projects.css';
-import img_WhatsApp from '../../../Images/img1.png';
-import img_BankingApp from '../../../Images/inicio vista admin.png';
+import img_WhatsApp from '../../assets/whatsapp-clone.png';
+import img_BankingApp from '../../assets/banking-app.png';
 
 import {
     MorphingDialog,
