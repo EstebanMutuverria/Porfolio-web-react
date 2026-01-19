@@ -1,0 +1,43 @@
+.infinite-slider-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 10px;
+    /* Mask edges for a nice fade effect */
+    mask-image: linear-gradient(to right,
+            transparent,
+            black 10%,
+            black 90%,
+            transparent);
+    -webkit-mask-image: linear-gradient(to right,
+            transparent,
+            black 10%,
+            black 90%,
+            transparent);
+}
+
+.infinite-slider-track {
+    display: flex;
+    width: max-content;
+    height: max-content;
+    /* Ensure track is wide enough for all items */
+    animation-name: scroll;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.infinite-slider-track.reverse {
+    animation-direction: reverse;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Move by half since we duplicated content */
+    }
+}

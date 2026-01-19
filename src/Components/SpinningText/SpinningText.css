@@ -1,0 +1,50 @@
+.spinning-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+}
+
+.spinning-text-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin linear infinite;
+}
+
+.spinning-text-char {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* Center the pivot point */
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+    /* Assumes 1em width roughly */
+
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    text-align: center;
+
+    color: var(--accent-color);
+    font-weight: 600;
+    text-transform: uppercase;
+
+    /* Critical: rotate around center, relying on translateY in JSX to push out */
+    transform-origin: center center;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
