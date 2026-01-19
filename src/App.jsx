@@ -8,17 +8,33 @@ import Experience from './Components/Experiencie/Experience';
 import Education from './Components/Education/Education';
 import Contact from './Components/Contact/Contact';
 
+import RevealOnScroll from './Components/RevealOnScroll/RevealOnScroll';
+
 function App() {
   return (
     <div>
       <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Education />
-      <Contact />
+      <RevealOnScroll>
+        <Home />
+      </RevealOnScroll>
+      <RevealOnScroll delay={100}>
+        <About />
+      </RevealOnScroll>
+      <RevealOnScroll>
+        <Skills />
+      </RevealOnScroll>
+      <RevealOnScroll>
+        <Projects />
+      </RevealOnScroll>
+      <RevealOnScroll>
+        <Experience />
+      </RevealOnScroll>
+      <RevealOnScroll>
+        <Education />
+      </RevealOnScroll>
+      <RevealOnScroll>
+        <Contact />
+      </RevealOnScroll>
     </div>
   );
 }
