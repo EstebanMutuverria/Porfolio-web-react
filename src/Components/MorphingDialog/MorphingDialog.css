@@ -1,0 +1,132 @@
+/* Base Trigger Styles */
+.morphing-dialog-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.morphing-dialog-trigger {
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--card-bg);
+    /* Fallback */
+}
+
+.morphing-dialog-trigger:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.morphing-dialog-trigger.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Overlay & Container Styles */
+.morphing-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease forwards;
+    padding: 1rem;
+}
+
+.morphing-dialog-container {
+    /* This mocks the expansion animation */
+    animation: expandDialog 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    background-color: var(--card-bg);
+    /* Use project theme */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    /* Resetting flex context if triggers relied on it */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Content Styles */
+.morphing-dialog-content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.morphing-dialog-image {
+    object-fit: cover;
+    display: block;
+}
+
+.morphing-dialog-description {
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+.morphing-dialog-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s;
+}
+
+.morphing-dialog-close:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes expandDialog {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Typography map to project styles */
+.morphing-dialog-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.25rem;
+}
+
+.morphing-dialog-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}

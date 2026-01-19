@@ -1,32 +1,40 @@
 import React from 'react';
 import './Projects.css';
+import img_WhatsApp from '../../../Images/img1.png';
+import img_BankingApp from '../../../Images/inicio vista admin.png';
+
+import {
+    MorphingDialog,
+    MorphingDialogTrigger,
+    MorphingDialogContent,
+    MorphingDialogTitle,
+    MorphingDialogImage,
+    MorphingDialogSubtitle,
+    MorphingDialogClose,
+    MorphingDialogDescription,
+    MorphingDialogContainer
+} from '../MorphingDialog/MorphingDialog';
+import { FaPlus } from "react-icons/fa";
 
 const Projects = () => {
     const projects = [
         {
             title: "WhatsApp Web Clone",
-            description: "A WhatsApp Web Clone built with React.",
-            tags: ["React", "CSS", "HTML", "JavaScript", "ContextAPI", "ReactRouter"],
+            subtitle: "React & ContextAPI",
+            description: "A complete clone of WhatsApp Web functionalities including real-time messaging simulation, contact management, and responsive layout.",
+            tags: ["React", "CSS", "HTML", "JavaScript"],
+            image: img_WhatsApp,
             link: "#"
         },
         {
             title: "Homebanking App",
-            description: "A Homebanking App built with Java.",
-            tags: ["Java", "HTML", "CSS", "JavaScript", "MySQL", "JSP", "Servlets", "Bootstrap"],
+            subtitle: "Java & MySQL",
+            description: "Secure banking application featuring account management, transfers, and transaction history. Built with a robust Java backend.",
+            tags: ["Java", "MySQL", "JSP", "Bootstrap"],
+            image: img_BankingApp,
             link: "#"
         },
-        {
-            title: "E-commerce management system",
-            description: "An E-commerce management system built with C#.",
-            tags: ["C#", "HTML", "CSS", "JavaScript", "SQL Server", ".NEt Framework", "Bootstrap"],
-            link: "#"
-        },
-        {
-            title: "Pharmacy management system",
-            description: "A Pharmacy management system built with C++.",
-            tags: ["C++", "Codeblocks", "File Management"],
-            link: "#"
-        }
+        // Add more projects...
     ];
 
     return (
@@ -34,16 +42,50 @@ const Projects = () => {
             <h2 className="section-title">Projects</h2>
             <div className="projects-grid">
                 {projects.map((project, index) => (
-                    <div key={index} className="project-card">
-                        <h3 className="project-title">{project.title}</h3>
-                        <p className="project-desc">{project.description}</p>
-                        <div className="project-tags">
-                            {project.tags.map((tag, idx) => (
-                                <span key={idx} className="tag">{tag}</span>
-                            ))}
-                        </div>
-                        <a href={project.link} className="project-link">View Project &rarr;</a>
-                    </div>
+                    <MorphingDialog key={index}>
+                        <MorphingDialogTrigger className="project-card-trigger">
+                            < MorphingDialogImage
+                                src={project.image}
+                                alt={project.title}
+                                className="project-card-image"
+                            />
+                            <div className="project-card-content">
+                                <div>
+                                    <MorphingDialogTitle>{project.title}</MorphingDialogTitle>
+                                    <MorphingDialogSubtitle>{project.subtitle}</MorphingDialogSubtitle>
+                                </div>
+                                <button className="project-expand-btn">
+                                    <FaPlus size={14} />
+                                </button>
+                            </div>
+                        </MorphingDialogTrigger>
+
+                        <MorphingDialogContainer>
+                            <MorphingDialogContent className="project-dialog-content">
+                                <MorphingDialogImage
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="project-dialog-image"
+                                />
+                                <div className="project-dialog-body">
+                                    <MorphingDialogTitle>{project.title}</MorphingDialogTitle>
+                                    <MorphingDialogSubtitle>{project.subtitle}</MorphingDialogSubtitle>
+                                    <MorphingDialogDescription>
+                                        <p>{project.description}</p>
+                                        <div className="project-tags-dialog">
+                                            {project.tags.map((tag, idx) => (
+                                                <span key={idx} className="tag">{tag}</span>
+                                            ))}
+                                        </div>
+                                        <a href={project.link} className="project-link-dialog" target="_blank" rel="noopener noreferrer">
+                                            View on GitHub &rarr;
+                                        </a>
+                                    </MorphingDialogDescription>
+                                </div>
+                                <MorphingDialogClose />
+                            </MorphingDialogContent>
+                        </MorphingDialogContainer>
+                    </MorphingDialog>
                 ))}
             </div>
         </section>

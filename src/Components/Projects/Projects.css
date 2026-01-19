@@ -1,57 +1,122 @@
+/* Inherit grid from previous logic or redefine */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
-.project-card {
+/* Trigger Card Styles */
+.project-card-trigger {
     background-color: var(--card-bg);
-    padding: 2rem;
-    border-radius: 15px;
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease;
+    overflow: hidden;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.project-card:hover {
-    transform: translateY(-8px);
+.project-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-.project-title {
-    font-size: 1.5rem;
-    color: var(--text-main);
-    margin-bottom: 1rem;
-}
-
-.project-desc {
-    color: var(--text-secondary);
-    margin-bottom: 1.5rem;
+.project-card-content {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     flex-grow: 1;
 }
 
-.project-tags {
+.project-expand-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+    color: var(--text-secondary);
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.project-expand-btn:hover {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+/* Dialog Content Specifics */
+.project-dialog-content {
+    background-color: var(--card-bg);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    color: var(--text-main);
+    width: 100%;
+    max-width: 600px;
+    /* Limit width on desktop */
+    overflow-y: scroll;
+}
+
+.project-dialog-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.project-dialog-content::-webkit-scrollbar-track {
+    background: var(--card-bg);
+}
+
+.project-dialog-content::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 5px;
+}
+
+.project-dialog-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.project-dialog-body {
+    padding: 2rem;
+}
+
+.project-dialog-body p {
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
 }
 
+.project-tags-dialog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
 .tag {
-    background-color: rgba(56, 189, 248, 0.1);
-    color: var(--accent-color);
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    box-shadow: 1px 0px 25px -6px rgba(71, 255, 255, 0.75);
+    -webkit-box-shadow: 1px 0px 25px -6px rgba(71, 255, 255, 0.75);
+    -moz-box-shadow: 1px 0px 25px -6px rgba(71, 255, 255, 0.75);
 }
 
-.project-link {
-    color: var(--accent-color);
+.project-link-dialog {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent-color);
+    color: #0f172a;
+    border-radius: 50px;
     font-weight: 600;
-    margin-top: auto;
-    /* Push to bottom */
 }
 
-.project-link:hover {
-    text-decoration: underline;
+.project-link-dialog:hover {
+    background-color: var(--accent-hover);
 }
