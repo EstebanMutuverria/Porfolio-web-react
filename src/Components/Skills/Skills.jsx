@@ -1,6 +1,6 @@
 import React from 'react';
 import './Skills.css';
-import InfiniteSlider from '../InfiniteSlider/InfiniteSlider';
+import InfiniteSlider from '../Animations/InfiniteSlider/InfiniteSlider';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaGithub, FaPython } from "react-icons/fa";
 import { SiMysql, SiCplusplus, SiDotnet } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";

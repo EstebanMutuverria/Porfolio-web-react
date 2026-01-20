@@ -24,7 +24,9 @@ html {
 
 body {
     font-family: var(--font-main);
-    background-color: var(--bg-color);
+    background: radial-gradient(circle at 50% 0%, #142b6b 0%, #020617 100%);
+    background-attachment: fixed;
+    /* Ensures gradient stays while scrolling */
     color: var(--text-main);
     line-height: 1.6;
     min-height: 100vh;

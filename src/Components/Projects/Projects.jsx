@@ -2,6 +2,7 @@ import React from 'react';
 import './Projects.css';
 import img_WhatsApp from '../../assets/whatsapp-clone.png';
 import img_BankingApp from '../../assets/banking-app.png';
+import img_ECommerce from '../../assets/e-commerce.png';
 
 import {
     MorphingDialog,
@@ -13,7 +14,7 @@ import {
     MorphingDialogClose,
     MorphingDialogDescription,
     MorphingDialogContainer
-} from '../MorphingDialog/MorphingDialog';
+} from '../Animations/MorphingDialog/MorphingDialog';
 import { FaPlus } from "react-icons/fa";
 
 const Projects = () => {
@@ -24,7 +25,7 @@ const Projects = () => {
             description: "A complete clone of WhatsApp Web functionalities including real-time messaging simulation, contact management, and responsive layout.",
             tags: ["React", "CSS", "HTML", "JavaScript"],
             image: img_WhatsApp,
-            link: "#"
+            link: "https://github.com/EstebanMutuverria/WhatsApp-Clon"
         },
         {
             title: "Homebanking App",
@@ -32,7 +33,23 @@ const Projects = () => {
             description: "Secure banking application featuring account management, transfers, and transaction history. Built with a robust Java backend.",
             tags: ["Java", "MySQL", "JSP", "Bootstrap"],
             image: img_BankingApp,
-            link: "#"
+            link: "https://github.com/EstebanMutuverria/Banking-App"
+        },
+        {
+            title: "E-Commerce managment system",
+            subtitle: "C#, .NET, SQL Server",
+            description: "E-Commerce management system with features such as product catalog, order processing, and user authentication.",
+            tags: ["C#", ".NET", "SQL Server", "Bootstrap", "ASP.NET"],
+            image: img_ECommerce,
+            link: "https://github.com/EstebanMutuverria/Gestion-de-Comercio"
+        },
+        {
+            title: "Web Portfolio",
+            subtitle: "React & Vite",
+            description: "A modern portfolio website built with React and Vite, featuring a responsive design and smooth animations.",
+            tags: ["React", "Vite", "CSS", "HTML", "JavaScript"],
+            image: null,
+            link: "https://github.com/EstebanMutuverria/Porfolio-web-react"
         },
         // Add more projects...
     ];

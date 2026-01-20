@@ -8,7 +8,7 @@ import Experience from './Components/Experiencie/Experience';
 import Education from './Components/Education/Education';
 import Contact from './Components/Contact/Contact';
 
-import RevealOnScroll from './Components/RevealOnScroll/RevealOnScroll';
+import RevealOnScroll from './Components/Animations/RevealOnScroll/RevealOnScroll';
 
 function App() {
   return (

@@ -1,20 +1,25 @@
 import React from 'react';
 import './Home.css';
+import { TextEffect } from '../Animations/TextEffect/TextEffect';
+import { TextShimmer } from '../Animations/TextShimmer/TextShimmer';
 
 const Home = () => {
     return (
         <section id="home" className="home-section">
             <div className="home-content">
-                <h1 className="hero-title">
-                    Hi, I'm <span className="highlight">Esteban</span><br />
-                    Web Developer
+                <p className="greeting">Hello, I'm</p>
+                <h1 className="name">
+                    <TextShimmer duration={2}>
+                        Esteban Mutuverria
+                    </TextShimmer>
                 </h1>
-                <p className="hero-subtitle">
-                    Building digital experiences with modern technologies.
-                    Passionate about creating clean, efficient, and beautiful web applications.
-                </p>
-                <div className="hero-buttons">
-                    <a href="#projects" className="btn primary">View Work</a>
+                <h2 className="role">
+                    <TextEffect per='char' preset='fade'>
+                        Full-Stack Developer
+                    </TextEffect>
+                </h2>
+                <div className="cta-container">
+                    <a href="#projects" className="btn primary">View My Work</a>
                     <a href="#contact" className="btn secondary">Contact Me</a>
                 </div>
             </div>

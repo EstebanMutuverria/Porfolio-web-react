@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import SpinningText from '../SpinningText/SpinningText';
+import SpinningText from '../Animations/SpinningText/SpinningText';
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
