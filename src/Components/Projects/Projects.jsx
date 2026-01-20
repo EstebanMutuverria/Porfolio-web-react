@@ -3,6 +3,7 @@ import './Projects.css';
 import img_WhatsApp from '../../assets/whatsapp-clone.png';
 import img_BankingApp from '../../assets/banking-app.png';
 import img_ECommerce from '../../assets/e-commerce.png';
+import img_WebPortfolio from '../../assets/portfolio-web.png';
 
 import {
     MorphingDialog,
@@ -48,7 +49,7 @@ const Projects = () => {
             subtitle: "React & Vite",
             description: "A modern portfolio website built with React and Vite, featuring a responsive design and smooth animations.",
             tags: ["React", "Vite", "CSS", "HTML", "JavaScript"],
-            image: null,
+            image: img_WebPortfolio,
             link: "https://github.com/EstebanMutuverria/Porfolio-web-react"
         },
         // Add more projects...

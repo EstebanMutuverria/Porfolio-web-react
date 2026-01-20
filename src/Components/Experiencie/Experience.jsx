@@ -4,16 +4,10 @@ import './Experience.css';
 const Experience = () => {
     const experiences = [
         {
-            role: "Frontend Developer",
-            company: "Tech Solutions Inc.",
-            period: "2024 - Present",
+            role: "Web Developer",
+            company: "Freelance",
+            period: "2025 - Present",
             description: "Developing responsive web applications using React and optimizing performance."
-        },
-        {
-            role: "Junior Web Developer",
-            company: "Digital Agency",
-            period: "2023 - 2024",
-            description: "Collaborated with the design team to implement UI components and fix bugs."
         }
     ];
 
