@@ -25,7 +25,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+        <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${isOpen ? 'active' : ''}`}>
             <div className="navbar-container">
                 <a href="#" className="logo-container" onClick={closeMenu}>
                     <SpinningText radius={2} fontSize={0.6} className='font-medium leading-none'>
