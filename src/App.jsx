@@ -7,6 +7,7 @@ import Projects from './Components/Projects/Projects';
 import Experience from './Components/Experiencie/Experience';
 import Education from './Components/Education/Education';
 import Contact from './Components/Contact/Contact';
+import Footer from './Components/Footer/Footer';
 
 import RevealOnScroll from './Components/Animations/RevealOnScroll/RevealOnScroll';
 
@@ -35,6 +36,7 @@ function App() {
       <RevealOnScroll>
         <Contact />
       </RevealOnScroll>
+      <Footer />
     </div>
   );
 }

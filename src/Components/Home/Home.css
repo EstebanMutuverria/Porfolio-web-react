@@ -91,6 +91,17 @@
     background-color: rgba(56, 189, 248, 0.1);
 }
 
+.btn-curriculum {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+.btn-curriculum:hover {
+    transform: scale(1.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: var(--accent-color);
+}
+
 /* Background Effects Removed globally */
 
 @keyframes fadeIn {

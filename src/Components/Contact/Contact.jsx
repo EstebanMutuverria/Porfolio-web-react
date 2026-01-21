@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import './Contact.css';
+import { HoverBorderGradient } from '../Animations/HoverBorderGradient/HoverBorderGradient';
 
 const Contact = () => {
     const [state, handleSubmit] = useForm("xykkwyvy");
@@ -68,9 +69,15 @@ const Contact = () => {
                             errors={state.errors}
                         />
                     </div>
-                    <button type="submit" className="btn primary" disabled={state.submitting}>
-                        {state.submitting ? 'Sending...' : 'Send Message'}
-                    </button>
+                    <HoverBorderGradient
+                        as="button"
+                        type="submit"
+                        disabled={state.submitting}
+                        containerClassName="rounded-full"
+                        className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+                    >
+                        <span className='btn-curriculum'>{state.submitting ? 'Sending...' : 'Send Message'}</span>
+                    </HoverBorderGradient>
                 </form>
                 <div className="contact-info">
                     <p>Or reach me via:</p>

@@ -1,0 +1,56 @@
+.hover-border-gradient-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+    /* The width of the border */
+    border-radius: 9999px;
+    /* Rounded full */
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    /* Reset button styles if it's a button */
+    border: none;
+    outline: none;
+    text-decoration: none;
+    /* Ensure it respects parent sizing or has default */
+    width: fit-content;
+}
+
+.hover-border-gradient-content {
+    background: var(--bg-color);
+    /* Matches theme background */
+    color: var(--text-main);
+    border-radius: 9999px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    /* Add padding here or passed via props, but padding ensures content spacing */
+    padding: 0.8rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    border: 1px solid rgba(100, 100, 100, 0.1);
+    height: 95%;
+}
+
+.hover-border-gradient-inner-bg {
+    position: absolute;
+    inset: 5px;
+    /* Slightly inner to not cover border */
+    background: var(--bg-color);
+    /* Ensure opaque background behind text */
+    border-radius: 9999px;
+    z-index: 1;
+}
+
+/* Define slightly different colors for the gradient if needed */
+:root {
+    --accent-light: #7dd3fc;
+    --accent-color: #38bdf8;
+    --accent-hover: #0ea5e9;
+    --accent-dark: #0ea5e9;
+    /* A lighter blue */
+}
