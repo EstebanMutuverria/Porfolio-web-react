@@ -29,7 +29,7 @@ const Home = () => {
                         containerClassName="rounded-full"
                         className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
                     >
-                        <span className='btn-curriculum'> Download CV </span>
+                        <span className='btn-curriculum'> Download Resume </span>
                     </HoverBorderGradient>
                 </div>
             </div>

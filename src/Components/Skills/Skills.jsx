@@ -26,6 +26,7 @@ const Skills = () => {
     return (
         <section id="skills" className="skills-section">
             <h2 className="section-title">Skills</h2>
+            <p className="section-subtitle">Here are some of the technologies I have worked with:</p>
             <InfiniteSlider gap={30} duration={25}>
                 {skillsWithIcons.map((skill, index) => (
                     <div key={index} className="skill-card">
