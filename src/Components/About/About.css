@@ -79,11 +79,24 @@
     transition: transform 0.3s ease;
     width: 270px;
     height: auto;
-    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+    box-shadow: 0 2px 8px rgba(56, 189, 248, 0.2);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .about-info-card:hover {
     transform: translateY(-8px);
+}
+
+.location-icon {
+    color: red
+}
+
+.focus-icon {
+    color: green;
+}
+
+.role-icon {
+    color: orange;
 }
 
 @media (max-width: 768px) {

@@ -16,6 +16,7 @@ import {
     MorphingDialogDescription,
     MorphingDialogContainer
 } from '../Animations/MorphingDialog/MorphingDialog';
+import { CardContainer, CardBody, CardItem } from '../Animations/3d-card/3d-card';
 import { FaPlus } from "react-icons/fa";
 
 const Projects = () => {
@@ -58,25 +59,43 @@ const Projects = () => {
     return (
         <section id="projects" className="projects-section">
             <h2 className="section-title">Projects</h2>
+            <p className="section-subtitle">Here are some of my favorite projects:</p>
             <div className="projects-grid">
                 {projects.map((project, index) => (
                     <MorphingDialog key={index}>
-                        <MorphingDialogTrigger className="project-card-trigger">
-                            < MorphingDialogImage
-                                src={project.image}
-                                alt={project.title}
-                                className="project-card-image"
-                            />
-                            <div className="project-card-content">
-                                <div>
-                                    <MorphingDialogTitle>{project.title}</MorphingDialogTitle>
-                                    <MorphingDialogSubtitle>{project.subtitle}</MorphingDialogSubtitle>
-                                </div>
-                                <button className="project-expand-btn">
-                                    <FaPlus size={14} />
-                                </button>
-                            </div>
-                        </MorphingDialogTrigger>
+                        <CardContainer className="inter-var">
+                            <MorphingDialogTrigger className="project-card-trigger-wrapper">
+                                <CardBody className="card-body-style relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto h-auto rounded-xl p-6 border">
+                                    <div className="project-card-content-3d">
+                                        <CardItem translateZ="50" className="card-item-title">
+                                            {project.title}
+                                        </CardItem>
+                                        <CardItem
+                                            as="p"
+                                            translateZ="60"
+                                            className="card-item-desc"
+                                        >
+                                            {project.subtitle}
+                                        </CardItem>
+                                        <CardItem translateZ="100" className="w-full mt-4">
+                                            <MorphingDialogImage
+                                                src={project.image}
+                                                alt={project.title}
+                                                className="card-item-image group-hover/card:shadow-xl"
+                                            />
+                                        </CardItem>
+                                        <div className="card-actions">
+                                            <CardItem
+                                                translateZ={20}
+                                                className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                                            >
+                                                Click for details →
+                                            </CardItem>
+                                        </div>
+                                    </div>
+                                </CardBody>
+                            </MorphingDialogTrigger>
+                        </CardContainer>
 
                         <MorphingDialogContainer>
                             <MorphingDialogContent className="project-dialog-content">

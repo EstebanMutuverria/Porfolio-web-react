@@ -5,48 +5,29 @@
     gap: 2rem;
 }
 
-/* Trigger Card Styles */
-.project-card-trigger {
-    background-color: var(--card-bg);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    overflow: hidden;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.project-card-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-card-content {
-    padding: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-grow: 1;
-}
-
-.project-expand-btn {
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: transparent;
+.section-subtitle {
     color: var(--text-secondary);
-    display: flex;
-    align-items: center;
+    margin-bottom: 2rem;
+    text-align: center;
     justify-content: center;
-    transition: all 0.2s;
 }
 
-.project-expand-btn:hover {
-    background: var(--accent-color);
-    color: white;
-    border-color: var(--accent-color);
+.inter-var {
+    cursor: pointer;
+}
+
+/* Trigger Card Styles - Now handled by 3d-card component */
+.project-card-trigger-wrapper {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* 3D Card internal overrides if needed */
+.card-item-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Dialog Content Specifics */

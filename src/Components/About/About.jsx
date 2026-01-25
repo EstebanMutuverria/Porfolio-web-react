@@ -17,22 +17,22 @@ const About = () => {
                     </p>
                     <p>
                         I enjoy solving complex problems and learning new technologies to keep up with the fast-paced
-                        tech industry. When I'm not coding, you can find me exploring new tech trends, or reading interesting documents.
+                        tech industry. When I'm not coding, you can find me exploring new tech trends, or searching for new tools to incorporate in my projects.
                     </p>
                 </div>
                 <div className="about-info-cards">
                     <div className="about-info-card">
-                        <FaLocationDot />
+                        <FaLocationDot className='location-icon' />
                         <h3>Location</h3>
                         <p>Argentina</p>
                     </div>
                     <div className="about-info-card">
-                        <FaLaptopCode />
+                        <FaLaptopCode className='focus-icon' />
                         <h3>Focus</h3>
                         <p>Web Development</p>
                     </div>
                     <div className="about-info-card">
-                        <FaUserSecret />
+                        <FaUserSecret className='role-icon' />
                         <h3>Role</h3>
                         <p>Full Stack Developer</p>
                     </div>
