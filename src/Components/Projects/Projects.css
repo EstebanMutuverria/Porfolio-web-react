@@ -14,6 +14,8 @@
 
 .inter-var {
     cursor: pointer;
+    height: 100%;
+    width: 100%;
 }
 
 /* Trigger Card Styles - Now handled by 3d-card component */

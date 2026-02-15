@@ -10,8 +10,8 @@ export const CardContainer = ({ children, className = "", containerClassName = "
   const handleMouseMove = (e) => {
     if (!containerRef.current) return;
     const { left, top, width, height } = containerRef.current.getBoundingClientRect();
-    const x = (e.clientX - left - width / 2) / 25;
-    const y = (e.clientY - top - height / 2) / 25;
+    const x = (e.clientX - left - width / 2) / 8;
+    const y = (e.clientY - top - height / 2) / 8;
     containerRef.current.style.setProperty("--x", `${x}deg`);
     containerRef.current.style.setProperty("--y", `${y}deg`);
   };
