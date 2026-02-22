@@ -4,10 +4,22 @@ import cvMutuverria from '../../assets/mutuverria-cv.pdf';
 import { TextEffect } from '../Animations/TextEffect/TextEffect';
 import { TextShimmer } from '../Animations/TextShimmer/TextShimmer';
 import { HoverBorderGradient } from '../Animations/HoverBorderGradient/HoverBorderGradient';
+import DarkVeil from './DarkVeil';
 
 const Home = () => {
     return (
         <section id="home" className="home-section">
+            {/* Fondo animado DarkVeil */}
+            <div className="home-bg">
+                <DarkVeil
+                    hueShift={0}
+                    noiseIntensity={0}
+                    scanlineIntensity={0}
+                    speed={0.5}
+                    scanlineFrequency={0}
+                    warpAmount={0}
+                />
+            </div>
             <div className="home-content">
                 <p className="greeting">Hello, I'm</p>
                 <h1 className="name">
