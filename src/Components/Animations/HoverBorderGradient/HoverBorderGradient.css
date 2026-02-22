@@ -54,3 +54,15 @@
     --accent-dark: #0ea5e9;
     /* A lighter blue */
 }
+
+@media (max-width: 768px) {
+    .hover-border-gradient-container {
+        width: 100%;
+    }
+
+    .hover-border-gradient-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
